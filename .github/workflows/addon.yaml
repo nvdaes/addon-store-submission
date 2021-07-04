@@ -40,5 +40,6 @@ jobs:
         git commit -m "add test"
         git checkout -b testIssue
         git push --set-upstream origin testIssue
+        git pull
         git push
         gh pr create
