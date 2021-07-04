@@ -42,4 +42,4 @@ jobs:
         git push --set-upstream origin testIssue
         git pull
         git push
-        gh pr create
+        gh pr create -f
