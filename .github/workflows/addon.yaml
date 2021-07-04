@@ -30,3 +30,12 @@ jobs:
       run: |
         mkdir test
         echo "${{steps.get-issue.outputs.result}}" > test/result.txt
+    - name: Push changes
+      run: |
+        git config --global user.name github-actions
+        git config --global user.email github-actions@github.com
+        git add .
+        git commit -m "add test"
+        git checkout -b testIssue
+        git push
+        gh pr create
