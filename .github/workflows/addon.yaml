@@ -25,6 +25,7 @@ jobs:
         script: |
           const body = context.payload.issue.body
           return body
+      result-encoding: string
     - name: Create pr
       run: |
         mkdir test
