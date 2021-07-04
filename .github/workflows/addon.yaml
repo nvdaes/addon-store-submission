@@ -26,4 +26,6 @@ jobs:
           const body = context.payload.issue.body
           return body
     - name: Create pr
-      run: echo "${{steps.get-issue.outputs.result}}" > test/result.txt
+      run: |
+        mkdir test
+        echo "${{steps.get-issue.outputs.result}}" > test/result.txt
