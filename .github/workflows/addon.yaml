@@ -20,7 +20,7 @@ jobs:
         python-version: 3.8
     - name: Get issue
       uses: actions/github-script@v4
-      id: get_issue
+      id: get-issue
       with:
         script: |
           const body = context.payload.issue.body
