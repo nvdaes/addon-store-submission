@@ -1,0 +1,15 @@
+### Add-on name
+
+placeMarkers
+
+### Add-on maintainer
+
+nvdaes
+
+### Add-on repository
+
+https://github.com/nvdaes/clipContentsDesigner
+
+### Stable branch
+
+- [x] Stable branch exists in add-on repo
