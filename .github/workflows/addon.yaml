@@ -2,6 +2,10 @@ name: addon
 
 on:
   issues:
+    types: 
+      - opened
+      - closed
+      - reopened
 
 jobs:
   addon:
@@ -18,9 +22,5 @@ jobs:
       uses: actions/github-script@v4
       with:
         script: |
-          const issue = github.issues.get({
-            repo: context.repo.repo,
-            owner: context.repo.owner,
-            issue_number: context.issue.number
-          })
-          console.log(issue)
+          const body = context.payload.issue.body
+          console.log(body)
