@@ -20,7 +20,10 @@ jobs:
         python-version: 3.8
     - name: Get issue
       uses: actions/github-script@v4
+      id: get_issue
       with:
         script: |
           const body = context.payload.issue.body
-          console.log(body)
+          return body
+    - name: Create pr
+      run: echo "${{steps.get-issue.outputs.result}}" > test/result.txt
